@@ -18,7 +18,7 @@
 // console.log(typeof(yourAge));
 
 //* task 
-var fNumber = +prompt('Enter First Number');
-var sNumber = +prompt('Enter Second Number');
-var result = fNumber + sNumber;
-console.log(result);
+// var fNumber = +prompt('Enter First Number');
+// var sNumber = +prompt('Enter Second Number');
+// var result = fNumber + sNumber;
+// console.log(result);

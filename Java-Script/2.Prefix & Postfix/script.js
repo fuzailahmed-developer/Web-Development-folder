@@ -45,9 +45,9 @@ document.write("<p><b>not define</b> means : define hi nahi ha.</p>");
 
 //* mind question 
 //? Q1. 
-// var num = 4;
-// var eq = num + num++ + ++num;
-// console.log(eq);
+var num = 4;
+var eq = num + num++ + ++num;
+console.log(eq);
 //? Q2. 
 // var num = 5;
 // var eq = num + num++ + num++;
