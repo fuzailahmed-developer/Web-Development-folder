@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table and Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <!--* Content Section  -->
+
+    <div class="section-content">
+        <h1>Poetry Workshops</h1>
+        <p>We will be conducting a number of poetry workshops and symposiums throughout the year.</p>
+        <p>Please note that the following events are free to members:</p>
+        <!--? list-Section -->
+        <ul>
+            <li>A Poetic Perspective</li>
+            <li>Walt Whitman at War</li>
+            <li>Found Poems and Outsider Poetry</li>
+        </ul>
+    </div>
+
+    <!--* Table-Section  -->
+    <table border="1">
+        <thead>
+            <tr>
+                <td></td>
+                <td>New York</td>
+                <td>Chicago</td>
+                <td>San Francisco</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="A-Section">
+                <td>A Poetic Perspective</td>
+                <td>Sat, 4 Feb 2012 <br>
+                    11am - 2pm</td>
+                <td>Sat, 3 Mar 2012 <br>
+                    11am - 2pm</td>
+                <td>Sat, 17 Mar 2012 <br>
+                    11am - 2pm</td>
+            </tr>
+            <tr  class="B-Section">
+                <td>Walt Whitman at War</td>
+                <td>Sat, 7 Apr 2012 <br>
+                    11am - 1pm</td>
+                <td>Sat, 5 May 2012 <br>
+                    11am - 1pm</td>
+                <td>Sat, 19 May 2012 <br>
+                    11am - 1pm</td>
+            </tr>
+            <tr  class="C-Section">
+                <td>Found Poems & Outsider Poetry</td>
+                <td>Sat, 9 Jun 2012 <br>
+                    11am - 2pm</td>
+                <td>Sat, 7 Jul 2012 <br>
+                    11am - 2pm</td>
+                <td>Sat, 21 Jul 2012 <br>
+                    11am - 2pm</td>
+            </tr>
+            <tr  class="D-Section">
+                <td>Natural Death: An Exploration</td>
+                <td>Sat, 4 Aug 2012 <br>
+                    11am - 4pm</td>
+                <td>Sat, 8 Sep 2012 <br>
+                    11am - 4pm</td>
+                <td>Sat, 15 Sep 2012 <br>
+                    11am - 4pm</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <!--* Section-Form  -->
+    
+    <div class="Section-Form">
+        <form>
+            <label for="your-name">
+                Your Name:
+                <input type="text"id="your-name">
+            </label>
+
+            <label for="your-email">
+                Your Email: 
+                <input type="email"id="your-email">
+            </label>
+
+            <label for="your-center">
+                your-center:
+                <select>
+                    <option value="new-york">New York</option>
+                    <option value="chicago">Chicago</option>
+                    <option value="san francisco">san francisco</option>
+                </select>
+            </label>
+            
+            <label for="member-select" class="member-lable">
+                Are you a member?
+                <label for="yes">
+                    Yes <input type="radio" name="member" id="yes">
+                </label>
+                <label for="no">
+                    No <input type="radio" name="member" id="no">
+                </label>
+            </label>
+        </form>
+    </div>
+    <button>Register</button>
+</body>
+
+</html>

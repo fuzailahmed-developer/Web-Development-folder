@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+a {
+    color:white;
+    text-decoration: none;
+}
+ul{
+    background-color: blue;
+    color: white;
+    text-align: center;
+    height: 10vh;
+}
+li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 0 20px;
+    line-height: 10vh;
+}
+li:hover{
+    line-height: 10vh;
+    background-color: red;
+    border-radius: 10px;
+}
+a:visited{
+    color: rgb(0, 0, 0);
+}

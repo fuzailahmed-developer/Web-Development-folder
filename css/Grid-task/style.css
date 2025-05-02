@@ -1,0 +1,130 @@
+/* .grid{
+    background-color: rgb(0, 238, 255);
+    display: grid;
+    grid-template-rows:repeat(4,30px) ;
+    row-gap: 10px;
+    padding: 10px;
+}
+.box{
+    background-color: blueviolet;
+    color: white;
+    line-height: 30px;
+    border-radius: 10px;
+    padding: 0 10px;
+} */
+
+/* 2nd task  */
+
+/* .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40vh 40vh;
+    gap: 10px;
+    background-color: black;
+    padding: 10px;
+  }
+  
+  .item1 {
+    background-color: rebeccapurple;
+    color: white;
+    border: 3px solid white;
+    border-radius: 10px;
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item2 {
+    border: 3px solid white;
+    border-radius: 10px;
+    background-color: rgb(74, 107, 12);
+    color: white;
+    grid-column: 2 / 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  /* 3rd task  */
+
+  /* .grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    background-color: lightcoral;
+  }
+  .one,.two,.three, .four{
+    background-color: lightblue;
+    padding: 10px;
+  }
+  .one{
+    grid-column: 1 / -1;
+  }
+  .four{
+    grid-column: 2 / -1;
+  } */
+  /* 4th task  */
+  .card img{
+      width: 100%;
+      border-radius: 10px 10px 0 0;
+      transition: all 1s ease-in;
+    }
+    .card img:hover{
+        transform: scale(1.2);
+    }
+    .card-img{
+        overflow: hidden;
+        border-radius: 10px 10px 0 0;
+
+    }
+    .container{
+        max-width: 1170px;
+        margin: auto;
+        padding: 20px 0;
+        background-color:#FF3EA5;
+        display: grid;
+        row-gap: 20px;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-around;
+        border-radius: 20px;
+    }
+    .card{
+        border-radius: 4px;
+        background-color: #E0E7E9;
+        border-radius: 10px;
+    }
+    .card-content{
+        padding: 10px 20px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    .card-content span{
+        text-transform: capitalize;
+        font-size: 18px;
+        font-weight: 700;
+        background-color: #384B70;
+        border-radius: 5px;
+        color: white;
+    }
+    .content-1 span:nth-child(5){
+        grid-column: 2 / -1;
+    }
+    .content-2 span:nth-child(4){
+        grid-column: 1 / -1;
+    }
+    .content-3 span:nth-child(4){
+        grid-column: 1 / -1;
+    }
+    .content-4 span:nth-child(4){
+        grid-column: 1 / -1;
+    }
+
+    .container .card:nth-child(4){
+        grid-column: 2 / 3;
+    }

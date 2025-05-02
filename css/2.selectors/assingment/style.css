@@ -1,0 +1,79 @@
+.header{
+    background-color: gray;
+    color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    margin: 30px 15px;
+    border-radius: 10px;
+}
+.same-property{
+    padding: 5px 20px;
+    color: white;
+    margin: 0 15px;
+}
+.colors1{
+background-color: #004d00;
+}
+.colors2{
+background-color: #006600;
+}
+.colors3{
+background-color: #008000;
+}
+.colors4{
+background-color: #009900;
+}
+.colors5{
+background-color: #00b300;
+}
+.colors6{
+background-color: #00cc00;
+}
+.colors7{
+background-color: #00e600;
+}
+.colors8{
+background-color: #ffff00;
+color: rgb(107, 107, 107);
+}
+.colors9{
+background-color: #ffcccc;
+}
+.colors10{
+background-color: #ffb3b3;
+}
+.colors11{
+background-color: #ff9999;
+}
+.colors12{
+background-color: #ff8080;
+}
+.colors13{
+background-color: #ff6666;
+}
+.colors14{
+background-color: #ff4d4d;
+}
+.colors15{
+background-color: #ff0000;
+}
+
+
+/* #004d00
+#006600
+#008000
+#009900
+#00b300
+#00cc00
+#00e600
+Neutral:
+
+#ffff00 (Yellow)
+Low (Light to Dark Red) - Acidic:
+
+#ffcccc
+#ffb3b3
+#ff9999
+#ff8080
+#ff6666
+#ff4d4d
+#ff0000 */

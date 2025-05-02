@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 400px;
+    height: 400px;
+    margin: 10% auto;
+    overflow: hidden;
+    display: flex;
+    border-radius: 20px;
+}
+.container img{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    animation: img-slider-1 5s ease-in infinite ;
+    
+}
+
+@keyframes img-slider-1 {
+    0%{
+        left: -400px;
+    }
+    25%{
+        left: -800px;
+    }
+    50%{
+        left: -1200px;
+    }
+    75%{
+        left: -1600px;
+    }
+    100%{
+        left: -1600px;
+    }
+}
