@@ -36,3 +36,28 @@ console.log(Math.min(88,0,9,3,9,10,-1));
 
 //? math.max for largest number
 console.log(Math.max(88,0,9,3,9,100,-1));
+
+//? dice
+
+//* method 1
+var newDice = Math.floor(Math.random() * 6) + 1;
+console.log(newDice);
+//* recommended Method 
+var dice = Math.ceil(Math.random() * 6);
+console.log(dice);
+
+
+//? OTP Generator
+
+var otpGenerator = Math.floor(Math.random() * 9000) + 1000;
+console.log(otpGenerator);
+// 1. not give 1
+// 2. kaha chalana ha 9000
+// 2. 1000 + max 9999
+
+//? Dice task
+
+// var firstDice = Math.ceil(Math.random() * 12);
+// var secondDice = Math.ceil(Math.random() * 12);
+// var total = firstDice + secondDice;
+// document.write(total)
