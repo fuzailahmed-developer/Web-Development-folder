@@ -104,3 +104,11 @@ for(var i = 5; i > 0 ; i--){
     document.write("<h1>" + stars + "</h1>");
     stars = stars + '*'
 }
+
+//? remove any word form string and white space
+var str = "Fuzail Selat Ahmed";
+console.log(str);
+console.log(str.replace("Selat","").replace(/\s{2,}/g, " ").trim());
+
+
+

@@ -144,7 +144,7 @@ console.log(pakistaniSnacks.includes("Gol Gappa"));
 // }
 
 //? print star with string 
-var stars = ""
+var stars = "*****"
 for(var i = 0; i < 5; i++){
     document.write(`<h1>${stars}</h1>`)
     stars = stars.slice(0,-1);

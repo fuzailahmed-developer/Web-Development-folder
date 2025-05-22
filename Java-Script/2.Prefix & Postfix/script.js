@@ -80,7 +80,7 @@ console.log(eq);
 // Last mein addition aur subtraction (left to right).
 
 //! More 
-// var result1 = (2 * 4) * 4 + 2;
-// console.log(result1);
+var result1 = (2 * 4) * 4 + 2;
+console.log(result1);
 
 // var  eq = 2 + (5 * (3 + 1));

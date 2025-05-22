@@ -18,7 +18,7 @@
 // }
 //? if else task 
 var num = 2;
-if (num >= 1) {
+if (num > 0) {
     console.log('Number is positive');
 } else if (num === 0){
     console.log('Number is Zero');

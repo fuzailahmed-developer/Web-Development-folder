@@ -24,18 +24,18 @@ console.log(result);
 // }
 
 //! Not Equal to != 
-// var myStudent = prompt('Enter Trainer Name');
-// if (myStudent != 'Fuzail') {
-//     console.log('is not my trainer');
-// } else{
-//     console.log('is my trainer');
+var myStudent = prompt('Enter Trainer Name');
+if (myStudent != 'Fuzail') {
+    console.log('is not my trainer');
+} else{
+    console.log('is my trainer');
     
-// }
+}
 
 //! with boolen data type 
-var flag = true;
-if (flag) {
-    console.log('yes');
-} else {
-    console.log('no');
-}
+// var flag = true;
+// if (flag) {
+//     console.log('yes');
+// } else {
+//     console.log('no');
+// }

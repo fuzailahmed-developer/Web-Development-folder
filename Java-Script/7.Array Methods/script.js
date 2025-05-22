@@ -27,15 +27,15 @@ var anotherFriendList2 = ["Ali","Zainab","Abdullah"];
 
 var yourName = prompt("Enter Your Name");
 
-if (yourName === "Amir" || yourName === "Fatima" || yourName === "Khadija" ) {
+if (yourName === yourNameList[0] || yourName === yourNameList[1] || yourName === yourNameList[2] ) {
 
     var friendName = prompt("Enter Your Friend Name") ;
     
-    if (friendName === "Hassan" || friendName === "Hussain" || friendName === "Omar") {
+    if (friendName === friendNameList1[0] || friendName === friendNameList1[1] || friendName === friendNameList1[2]) {
         
         var anotherFriend = prompt("Enter another Friend Name");
 
-        if (anotherFriend === "Ali" || anotherFriend === "Zainab" || anotherFriend === "Abdullah") {
+        if (anotherFriend === anotherFriendList2[0] || anotherFriend === anotherFriendList2[1] || anotherFriend === anotherFriendList2[2]) {
             console.log(
             'My name is : ' + yourName +
             '\nMy friend name is : ' + friendName +
