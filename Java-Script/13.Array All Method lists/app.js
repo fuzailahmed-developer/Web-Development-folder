@@ -24,7 +24,7 @@ console.log(countries);
 //! Part - 2 
 const pakistaniCities = [
   "Karachi",
-  "Lahore",
+  "Lahore", 
   "Islamabad",
   "Rawalpindi",
   "Faisalabad",
