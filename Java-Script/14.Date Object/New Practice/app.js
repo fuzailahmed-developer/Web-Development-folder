@@ -1,4 +1,4 @@
-//! Get Value in Date // change dataType of date 
+//! Get Value in Date
 var dateMethod = new Date();
 
 //! 1.print full date using date method 
