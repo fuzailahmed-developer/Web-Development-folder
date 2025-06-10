@@ -1,0 +1,34 @@
+@media screen and (min-width:1400px) {
+}
+@media screen and (min-width:1200px) and (max-width:1399px){
+}
+@media screen and (min-width:992px) and (max-width:1199px){
+}
+@media screen and (min-width:768px) and (max-width:991px){
+}
+@media screen and (min-width:576px) and (max-width:767px) {
+}
+@media screen and (min-width:0px) and (max-width:575px) {
+    /* header  */
+    .hd-btn-1,.hd-btn-2{
+        display: none;
+    }
+    .text{
+        display: none;
+    }
+    .h-logo{
+        justify-content: start !important;
+    }
+    .h-menu{
+        display: block !important;
+        color: white;
+        position: relative;
+        left: 170px;
+        bottom: 35px;
+        font-size: 18px;
+    }
+    .main-control .logo{
+        width: 100px !important;
+    }
+}
+
