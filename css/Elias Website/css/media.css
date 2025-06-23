@@ -1,0 +1,80 @@
+@media screen and (min-width:1400px) {
+/* container start  */
+    .container {
+        max-width: 1024px;
+    }
+/* container end */
+}
+
+@media screen and (min-width:1200px) and (max-width:1399px) {
+/* container start  */
+    .container {
+        max-width: 1024px;
+    }
+/* container end */
+}
+
+@media screen and (min-width:993px) and (max-width:1199px) {
+/* container start  */
+    .container {
+        max-width: 870px;
+    }
+/* container end */
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+/* container start  */
+    .container {
+        max-width: 650px;
+    }
+/* container end */
+}
+
+@media screen and (min-width:577px) and (max-width:767px) {
+/* container start  */
+    .container {
+        max-width: 480px;
+    }
+/* container end */
+/* media icon start*/
+.media-icon img{
+    max-height: 200px;
+    position: absolute;
+    left: 10px;
+}
+/* media icon end*/
+/* header links start*/
+.header-links ul{
+    gap: 10px;
+}
+/* header links end*/
+}
+
+@media screen and (min-width:0px) and (max-width:576px) {
+/* container start  */
+    .container {
+        max-width: 100%;
+    }
+/* container end */
+/* media img start  */
+.media-icon img{
+    display: none;
+}
+/* media img end  */
+/*! header start  */
+/* header row start */
+.row-header{
+    padding-top: 32px;
+    padding-inline: 20px;
+}
+/* header row end */
+
+/* header links start*/
+.header-links ul{
+    display: flex;
+    gap: 32px;
+}
+/* header links end*/
+/*! header end */
+}
+
