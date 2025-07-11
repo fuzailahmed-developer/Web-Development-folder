@@ -44,3 +44,5 @@ var getTime1 = new Date().toTimeString();
 var getTime2 = new Date().toLocaleTimeString();
 console.log(getTime1);
 console.log(getTime2);
+
+

@@ -42,3 +42,24 @@ let person = {
 
 let copyPerson = JSON.parse(JSON.stringify(person))
 copyPerson.address.zip = 888323;
+
+
+
+
+
+
+
+let person1 = {
+  name: "Ahmed",
+  age: 30,
+  address: {
+    city: "Karachi",
+    zip: 74000
+  },
+  contact: {
+    phone: "03123456789",
+    email: "ahmed@example.com"
+  }
+};
+
+let personCopy = person1

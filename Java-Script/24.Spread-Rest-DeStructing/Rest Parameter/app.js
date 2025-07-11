@@ -15,3 +15,13 @@ function sum(...number){
     return number.reduce((a,b) => a + b)
 }
 console.log(sum(10,10,10,1020,30));
+
+
+
+
+let store = (...val) => {
+    return val
+}
+let resultStore = store("ali","ahmed","raza","amir","baber");
+console.log(resultStore);
+
