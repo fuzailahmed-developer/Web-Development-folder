@@ -21,7 +21,7 @@ console.log(age);
 console.log(city);
 
 
-//! Enhance Obj
+//! Enhance Object literals
 
 let person = "ali"
 let personAge = 18
