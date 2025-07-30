@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        .container{
+            max-width: 700px;
+            margin: 20px auto;
+        }
+        fieldset{
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 20px ;
+            overflow: hidden;
+        }
+        legend{
+            font-weight: bold;
+        }
+        input{
+            outline: none;
+            width: 95%;
+            padding: 10px;
+        }
+        ::placeholder{
+            color: black;
+        }
+       fieldset > div{
+        margin-top: 10px;
+       }
+       .gender input{
+        width: auto;
+       }
+       textarea{
+        resize: none;
+        width: 95%;
+        outline: none;
+        border: 1px solid black;
+        margin-top: 5px;
+        padding: 10px;
+       }
+       .btns{
+        display: flex;
+        gap: 10px;
+       }
+       button{
+        flex-grow: 1;
+       }
+       .btns button{
+        background-color: lightblue;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 10px;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <fieldset>
+            <legend>User personal information</legend>
+            <div class="name">
+                <label for="user-name">Enter Your Full Name:</label>
+                <br>
+                <input type="text" id="user-name" placeholder="Enter Your Full Name" required>
+            </div>
+            <!-- email  -->
+            <div class="email">
+                <label for="user-email">Enter Your Email:</label>
+                <br>
+                <input type="email" id="user-email" placeholder="Enter Your Email" required>
+            </div>
+            <!-- password  -->
+            <div class="password">
+                <label for="user-password">Enter Your Password:</label>
+                <br>
+                <input type="password" id="user-password" placeholder="Enter Your Password" required>
+            </div>
+            <!-- conform password -->
+             <div class="cn-password">
+                <label for="user-cn-password">Enter Conform Password:</label>
+                <br>
+                <input type="password" id="user-cn-password" placeholder="Enter Conform Password" required>
+            </div>
+            <!-- check box -->
+             <div class="gender">
+                <label>Gender: <br> 
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="genders" checked>
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="genders">
+                </label>
+             </div>
+             <!-- message -->
+              <div class="message">
+                <label for="text-message">Message</label><br>   
+                <textarea id="text-message" rows="5"></textarea>
+              </div>
+
+              <div class="btns">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+              </div>
+        </fieldset>
+    </div>
+
+</body>
+</html>

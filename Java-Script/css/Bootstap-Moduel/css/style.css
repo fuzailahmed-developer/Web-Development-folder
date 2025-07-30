@@ -1,0 +1,21 @@
+*{
+      font-family: "Inter", sans-serif;
+}
+:root{
+    --Bg-Black:#0B0D17;
+    --Btn-Green:#4CAF4F;
+    --Bg-silver:#F5F7FA;
+    --Gray-text:#717171;
+    --Dark-gary:#4D4D4D;
+    --Dark-green:#1B5E1F;
+    --light-text:#89939E;
+    --white:#FFFFFF;
+    --Black:#000000;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}

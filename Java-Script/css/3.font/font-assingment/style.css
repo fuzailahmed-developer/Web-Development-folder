@@ -1,0 +1,53 @@
+/*? ADD Custom font  */
+@font-face {
+    font-family: heading-font;
+    src: url('./secret_memories_2/secret\ memories.ttf');
+}
+
+@font-face {
+    font-family: para-font;
+    src: url('../Josefin_Sans/JosefinSans-VariableFont_wght.ttf');
+}
+
+h1,h2 {
+    font-family: heading-font;
+    /* font-weight: normal; */
+    text-shadow: 1px 1px 2px #98D2C0;
+    color: #1F7D53;
+}
+h1{
+    font-weight: 500;
+    font-size: 38px;
+}
+h2{
+    font-weight: normal;
+}
+.letter-spacing{
+    letter-spacing: 4px;
+    word-spacing: 3px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+p{
+    font-family: "Poppins", sans-serif;
+}
+p.bold-text{
+    font-weight: bold;
+    a{
+        text-decoration: none;
+        font-weight: normal;
+        color: #1F7D53;
+    }
+}
+.right{
+   text-align: right;
+   font-style: italic;
+   color: #18230F;
+   margin-right: 70px;
+   font-weight: 500;
+}
+.para{
+    font-family: para-font;
+    line-height: 1.5;
+    font-size: 17px;
+}
