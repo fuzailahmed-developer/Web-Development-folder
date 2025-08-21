@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@layer base{
+    h1{
+        font-size: 44px;
+    }
+}
+
+@layer components{
+    .custom{
+        @apply bg-cyan-700 text-white text-center border border-black py-5 mt-5 text-3xl transition duration-1000 hover:bg-gradient-to-l hover:to-purple-800 hover:from-cyan-950 
+    }
+}

@@ -1,0 +1,12 @@
+@import "tailwindcss";
+/* @utility container {
+    margin-left:auto;
+    margin-right:auto;
+}; */
+
+/*? custom color  */
+@theme {
+  --color-brand: #ff5733;
+  --color-brand-dark: #c70039;
+  --color-brand-light: #ffbd69;
+}

@@ -24,3 +24,4 @@ try {
 } catch (error) {
     console.log("Error caught: " + error);
 }
+

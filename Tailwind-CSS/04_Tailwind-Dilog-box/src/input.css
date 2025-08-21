@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme{
+    --max-width-cmw:500px;
+    --breakpoint-sm:500px; 
+}
+
+
+@layer{
+    .btn{
+        @apply border py-2 px-4 rounded transition duration-200 font-semibold
+    }
+}

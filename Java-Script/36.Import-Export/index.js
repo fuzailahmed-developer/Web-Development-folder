@@ -1,3 +1,4 @@
-import {arr,obj} from "./product/products.js";
+import {arr,obj as userList} from "./product/products.js"
 console.log(arr);
-console.log(obj);
+console.log(userList);
+
