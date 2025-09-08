@@ -1,0 +1,16 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+
+@theme {
+    --font-Archivo: "Archivo", sans-serif;
+    --breakpoint-cus:1150px;
+}
+
+@layer base{
+    body{
+        @apply font-Archivo
+    }
+}

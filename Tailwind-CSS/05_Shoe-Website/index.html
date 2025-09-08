@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Web</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+
+<body class="bg-black text-white">
+
+    <!--! header section -->
+
+    <header class="flex justify-between lg:px-24 px-10 items-center py-1 fixed w-full">
+        <a href="#">
+            <img src="./images/shoe-logo.png" alt="logo" class="lg:w-32 w-24">
+        </a>
+
+        <!-- Ye menu sirf md (768px+) screen per dikhega -->
+        <nav class="hidden md:block font-bold lg:space-x-8 lg:text-xl md:space-x-6">
+            <a href="#">Home</a>
+            <a href="#how-it-works">How It Works?</a>
+            <a href="#about">About</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact-us">Contact Us</a>
+        </nav>
+
+        <!-- Ye icon sirf mobile (<768px) par dikhega -->
+        <button class="text-2xl md:hidden"><i class="fa-solid fa-bars"></i></button>
+    </header>
+
+    <!--! end header section -->
+
+
+    <!--! main section  -->
+
+    <main>
+
+        <section class="bg-[url('../images/background-road.png')] bg-contain bg-no-repeat bg-top-right 2xl:pt-32 md:pt-48 cus:pb-0 md:pb-24 2xl:pb-0">
+
+            <div class="flex items-center mx-auto max-w-7xl xl:gap-64 cus:gap-40 pl-24 lg:gap-24">
+                <h1 class="text-7xl font-bold leading-[78px]">THE <br> SHOE <br>COMPANY</h1>
+                <img src="./images/shoe-img.png" alt="shoe" class="2xl:w-[600px] cus:w-[500px] md:w-[400px]">
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>

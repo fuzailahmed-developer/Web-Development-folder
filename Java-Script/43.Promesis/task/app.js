@@ -1,4 +1,6 @@
-// // task - 1
+//! Promise
+{
+    // task - 1
 // let RandomNum = new Promise((resolve, reject) => {
 //     let generateNum = Math.ceil(Math.random() * 10)
 
@@ -14,7 +16,7 @@
 //     console.log(RandomNum);
 // })
 
-// // task - 2
+// task - 2
 
 // function loginUser(username, password) {
 //     let check = new Promise((resolve, reject) => {
@@ -29,7 +31,7 @@
 //     console.log(err);
 // })
 
-// // task - 3
+// task - 3
 
 // let userInput = document.querySelector("input")
 // let btn = document.querySelector("button")
@@ -58,7 +60,7 @@
 // })
 
 
-// // task - 4 
+// task - 4 
 
 // let task = new Promise((resolve, reject) => {
 //     console.log("Loading....");
@@ -94,3 +96,5 @@ Weather.then((data) => {
 })
 
 
+
+}
