@@ -1,0 +1,12 @@
+node js Guide
+
+1.create folder
+2.create server.js
+3.open in vs code
+4.npm init -y / install package.json file
+5.install any package from npm website like this "npm i axios"
+* ya ap ku dependencies install kr ke dega package.json file ma
+6.for run only js file on server use "node server.js"
+7.for run direct server use "npm start"
+8.not puch node_modules folder in GitHub
+* create file with .gitignore => folter name node_modules
