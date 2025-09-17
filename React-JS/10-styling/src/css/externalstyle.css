@@ -1,0 +1,16 @@
+.btn{
+    padding: 8px 20px;
+    border-radius: 10px;
+    background-color: yellow;
+    border: none;
+    margin-top: 40px;
+}
+.btnDiv{
+    display: flex;
+    justify-content: center;
+}
+.heading{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
