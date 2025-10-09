@@ -1,0 +1,30 @@
+Routing in React JS
+
+<BrowserRouter>
+	* ya client side routing ku enable krta ha server per request send nahi krta jis ki waja sa page refersh nahi huta link change huna per.
+	# best practice is use browser router in main component
+</BrowserRouter>
+
+<Routes>
+	* ka kaam kya hai?
+	* <Routes> ek container (parent) component hai jisme hum multiple <Route> components likhte hain.
+	* Ye React Router ko batata hai:
+	# “Yahan pe sab routes define hain — inme se URL match hone par correct component render karo.”
+<Routes>
+
+<Route /> best practice self closing
+	* ka kaam kya hai?
+	* <Route> ek individual path aur uske component ko define karta hai.
+	* Har <Route> ke 2 main props hote hain:
+	# path → kis URL pe ye route trigger hoga
+	# element → konsa component show karna hai
+	• <Route path='/' element={<Home />}/>
+
+<link> & (useNavigate - import)
+
+🔹 Link → jab user manually click kare
+🔹 navigate() → jab aap manually route change karwana chahein (like button click, condition, etc.)
+
+(useLocation - import)
+
+🔹 current url path ka liya
