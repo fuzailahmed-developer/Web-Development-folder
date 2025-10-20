@@ -1,0 +1,43 @@
+{
+  "users": [],
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "price": 120000,
+      "category": "Electronics"
+    },
+    {
+      "id": "2",
+      "name": "Headphones",
+      "price": 3500,
+      "category": "Accessories"
+    },
+    {
+      "id": "3",
+      "name": "Keyboard",
+      "price": 2500,
+      "category": "Accessories"
+    }
+  ],
+  "posts": [
+    {
+      "id": "1",
+      "title": "React Tips",
+      "body": "Learn React step by step",
+      "author": "Fuzail"
+    },
+    {
+      "id": "2",
+      "title": "Node Basics",
+      "body": "Understanding the backend",
+      "author": "Ali"
+    },
+    {
+      "id": "3",
+      "title": "CSS Tricks",
+      "body": "Make your UI look modern",
+      "author": "Sara"
+    }
+  ]
+}
