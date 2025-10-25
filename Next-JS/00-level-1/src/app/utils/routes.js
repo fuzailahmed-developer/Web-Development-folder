@@ -1,0 +1,1 @@
+export const myRoutes = ["/","/about","/contact","/contact/whatsapp"]

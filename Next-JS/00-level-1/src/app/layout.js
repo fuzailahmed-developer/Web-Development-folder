@@ -1,16 +1,28 @@
+"use client"
+
+import { usePathname } from "next/navigation";
 import Footer from "./footer/Footer";
 import "./globals.css";
 import Navbar from "./navbar/Navbar";
+import { myRoutes } from "./utils/routes";
 
 
 function RootLayout({ children }) {
-  console.log(children)
+
+  const pathname = usePathname()
+  console.log(pathname)
+
+
   return (
     <html lang="en">
       <body>
-        <Navbar />
+        {
+          myRoutes.includes(pathname) && <Navbar />
+        }
         {children}
-        <Footer />
+        {
+          myRoutes.includes(pathname) && <Footer />
+        }
       </body>
     </html>
   );
