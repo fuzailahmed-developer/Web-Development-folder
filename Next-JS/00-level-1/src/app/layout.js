@@ -10,18 +10,33 @@ import { myRoutes } from "./utils/routes";
 function RootLayout({ children }) {
 
   const pathname = usePathname()
-  console.log(pathname)
 
 
   return (
     <html lang="en">
       <body>
         {
-          myRoutes.includes(pathname) && <Navbar />
+          myRoutes.includes(pathname)
+            ?
+            <Navbar />
+            :
+            pathname.startsWith('/profile')
+              ?
+              <Navbar />
+              :
+              null
         }
         {children}
         {
-          myRoutes.includes(pathname) && <Footer />
+          myRoutes.includes(pathname)
+            ?
+            <Footer />
+            :
+            pathname.startsWith('/profile')
+              ?
+              <Footer />
+              :
+              null
         }
       </body>
     </html>

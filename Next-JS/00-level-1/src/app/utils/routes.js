@@ -1,1 +1,1 @@
-export const myRoutes = ["/","/about","/contact","/contact/whatsapp"]
+export const myRoutes = ["/","/about","/contact","/contact/whatsapp","/profile","/dashboard","/cart"]
