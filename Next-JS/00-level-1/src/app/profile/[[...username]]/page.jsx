@@ -8,7 +8,7 @@ const User = async ({params}) => {
     <div>
         <ul>
           {
-            username.map((user,idx) => (
+            username?.map((user,idx) => (
               <li key={idx}>{user}</li>
             ))
           }

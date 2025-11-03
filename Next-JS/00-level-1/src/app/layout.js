@@ -7,7 +7,7 @@ import Navbar from "./navbar/Navbar";
 import { myRoutes } from "./utils/routes";
 
 
-function RootLayout({ children }) {
+function RootLayout({ children , team}) {
 
   const pathname = usePathname()
 
@@ -27,6 +27,7 @@ function RootLayout({ children }) {
               null
         }
         {children}
+        {team}
         {
           myRoutes.includes(pathname)
             ?
