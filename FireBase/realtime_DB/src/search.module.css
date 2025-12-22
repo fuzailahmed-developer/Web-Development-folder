@@ -1,0 +1,130 @@
+.content_div>* {
+    flex-grow: 1;
+    color: white;
+    background: linear-gradient(to right, rgb(102, 19, 197), purple);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.content_div>* span:first-child {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+
+
+.my_container {
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(102, 19, 197), purple);
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: start;
+    gap: 30px;
+    padding: 100px 20px 20px 20px;
+}
+
+.simple_btn {
+    background: linear-gradient(to left, rgb(102, 19, 197), purple);
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 40px;
+    color: white;
+    border: none;
+    border: 1px solid white;
+}
+.content_container{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 20px 50px;
+    /* justify-content: space-between; */
+    width: 100%;
+}
+.content_container > *{
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.input{
+    outline: none;
+    max-width: 500px;
+    width: 100%;
+    padding-left: 20px;
+    height: 40px;
+    border-radius: 8px;
+    color: gray;
+}
+.input::placeholder{
+    color: gray;
+}
+
+.input_div{
+    width: 100%;
+    padding-inline: 50px;
+}
+
+.loading_img{
+    width: 100%;
+    height: calc(100vh - 220px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message_div{
+    width: 100%;
+    height: calc(100vh - 230px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message_div{
+    border: none !important;
+}
+
+.message_div h1{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.btn {
+    background: linear-gradient(to left, rgb(102, 19, 197), purple);
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    margin-top: auto;
+    margin-left: auto;
+    cursor: pointer;
+    animation: pulse 0.5s linear infinite;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.btn a {
+    padding: 20px 40px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.6);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.05);
+    }
+}

@@ -1,0 +1,37 @@
+setup firebase 
+
+1. Firebase configuration copy from firebase
+
+2. 2 types of Database realtime and firestore 
+
+| Feature         | Firestore               | Realtime Database   |
+| --------------- | ----------------------- | ------------------- |
+| Data Model      | Documents & Collections | Large JSON tree     |
+| Scalability     | ⭐⭐⭐⭐⭐            | ⭐⭐⭐             |
+| Real-time Speed | ⭐⭐⭐⭐               | ⭐⭐⭐⭐⭐ (fastest)|
+| Query Power     | ⭐⭐⭐⭐⭐             | ⭐⭐                |
+| Security Rules  | Easy                    | Hard                |
+| Price           | Reads/Writes            | Bandwidth           |
+| Best For        | Large apps, dashboards  | Chat, live tracking |
+
+firestore 
+import { getFirestore } from "firebase/firestore";
+export const db = getFirestore(app)
+
+realtime
+import { getDatabase } from "firebase/database";
+export const realTimeDB = getDatabase(app)
+
+
+3. Add Data in DataBase
+
+import collection and addDoc
+
+addDoc(collection(db,"database name"),{
+    name,age,city
+})
+
+
+loading ? 
+                <img src={loadingImg} alt="" width={200} height={100} className='absolute top-1/2 left-1/2 -translate-1/2'/>:
+                loading

@@ -1,0 +1,138 @@
+.my_container {
+    min-height: 100vh;
+    background: linear-gradient(to right, rgb(102, 19, 197), purple);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    align-content: start;
+    gap: 30px;
+    padding: 100px 20px 20px 20px;
+}
+
+.content_div {
+    max-width: 1200px;
+    width: 100%;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.content_div>* {
+    flex-grow: 1;
+    color: white;
+    background: linear-gradient(to right, rgb(102, 19, 197), purple);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.content_div>* span:first-child {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.content_div div:first-child:hover{
+    cursor: pointer;
+    background: linear-gradient(to left, rgb(102, 19, 197), purple);
+    transition: all 0.3s linear;
+}
+
+.btn {
+    background: linear-gradient(to left, rgb(102, 19, 197), purple);
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    margin-top: auto;
+    margin-left: auto;
+    cursor: pointer;
+    animation: pulse 0.5s linear infinite;
+    position: absolute;
+    top: 16px;
+    left: 16px;
+}
+
+.btn a {
+    padding: 20px 40px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+.btn2 {
+    background: linear-gradient(to left, rgb(102, 19, 197), purple);
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    margin-top: auto;
+    margin-left: auto;
+    cursor: pointer;
+    animation: pulse 0.5s linear infinite;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+.btn2 a {
+    padding: 20px 40px;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.simple_btn {
+    background: linear-gradient(to left, rgb(102, 19, 197), purple);
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px 40px;
+    color: white;
+    border: none;
+    border: 1px solid white;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.6);
+    }
+
+    100% {
+        box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 0.05);
+    }
+}
+
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Background track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Scroll thumb (the line you drag) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to top, rgb(102, 19, 197), purple);
+  border-radius: 30px;
+}
+
+/* On hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, rgb(102, 19, 197), purple);
+}
+
+.img_container{
+    height: calc(100vh - 220px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
