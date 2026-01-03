@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+@theme {
+    --breakpoint-b700:700px;
+}

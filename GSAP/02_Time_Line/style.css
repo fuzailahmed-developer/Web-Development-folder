@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.circle,
+.doted-circle,
+.square{
+    width: 150px;
+    height: 150px;
+    margin-block: 50px;
+    margin-left: 20px;
+}
+
+.circle{
+    background-color: aqua;
+    border-radius: 50%;
+}
+.doted-circle{
+    border-radius: 50%;
+    border: 5px dotted white;
+}
+.square{
+    background-color: red;
+}
+
+.container button{
+    padding: 10px 30px;
+    border-radius: 30px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
