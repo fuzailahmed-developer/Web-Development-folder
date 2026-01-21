@@ -1,15 +1,27 @@
 import { create } from "zustand";
 
-const useMyStore = create((set,get) => ({
-    count: 1,
-    name: 'fuzail',
-    increment() {
-        set((state) => ({ count: state.count + 1 }))
+export const useTodoStore = create((set,get) => ({
+    data : [],
+    editIndex : null,
+    addItem (item){
+        set((state) => ({
+            data : [...state.data,item]
+        }))
     },
-    capitalize() {
-        const {name} = get()
-        set({name : name[0].toUpperCase() + name.slice(1)})
+    deleteItem(index){
+        set((state) => ({
+            data : state.data.filter((_,idx) => idx != index)
+        }))
+    }, 
+    startEdit(idx){
+        set({editIndex : idx})
+    },
+    updateItem(value){
+        set((state) => ({
+            data : state.map((item,idx) => 
+                idx == state.editIndex ? value : item
+            ),
+            editIndex : null
+        }))
     }
-}))
-
-export default useMyStore
+})) 
