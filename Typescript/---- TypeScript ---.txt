@@ -1,0 +1,8 @@
+---- TypeScript ---
+
+1. app.ts / create file 
+2. npm install typescript -D or npm install typescript --save-dev / install typescript
+3. npx tsc app.ts --watch / compile typescript
+4. node app.js / run javascript
+5. npx tsc --init / tsconfig file
+6. npx tsc / compile all file in onces but first generate tsconfig file
