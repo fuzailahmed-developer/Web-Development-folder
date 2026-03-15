@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Parsing Request</title>
+</head>
+<body>
+  
+  <h1>
+    Home Page
+  </h1>
+
+  <form action="/submit" method="post">
+        <label for="username">
+          Username : 
+          <input 
+            type="text" 
+            placeholder="Enter UserName"
+            name="username"
+            >
+        </label> <br><br>
+        <label for="male">
+          Male : 
+          <input 
+            type="radio" 
+            name="gender"
+            id="male"
+            >
+        </label>
+        <label for="female">
+          Female : 
+          <input 
+            type="radio" 
+            name="gender"
+            id="female"
+            >
+        </label> <br><br>
+        <button type="submit">
+          Submit
+        </button>
+  </form>
+
+</body>
+</html>
