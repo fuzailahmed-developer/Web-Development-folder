@@ -1,0 +1,7 @@
+Short Summary 
+Feature	        interface	  type
+Object define	      ✅	      ✅
+Union types	        ❌	      ✅
+Primitive alias	    ❌	      ✅
+Declaration merging	✅	      ❌
+Extend            	✅	      ✅
