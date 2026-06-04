@@ -1,4 +1,6 @@
-const signupValidation = (req, res, next) => {
+import User from "../models/user.model.js";
+
+const signupValidation = async (req, res, next) => {
   try {
 
     console.log(req.body);
@@ -37,6 +39,15 @@ const signupValidation = (req, res, next) => {
         success: false,
         message: 'All fields are required except profile image.'
       })
+    }
+
+    const isUserExist = await User.findOne({ $or: [{ userName, email }] })
+
+    if (isUserExist) {
+      return res.status(400).json({
+        success: false,
+        message: "Username or Email already exists"
+      });
     }
 
     if (password.length < 8) {
