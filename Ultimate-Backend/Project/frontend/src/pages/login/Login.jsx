@@ -1,5 +1,7 @@
-import { useState } from "react";
+import toast from "react-hot-toast";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
+import AuthContext from "../../context/auth/auth.context.jsx";
 
 const Login = () => {
 
@@ -7,6 +9,10 @@ const Login = () => {
     email: '',
     password: ''
   })
+
+  const { getCurrentUser } = useContext(AuthContext)
+
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleInputChange = (e) => {
     const { value, name } = e.target
@@ -19,6 +25,11 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    if (isLoading) return
+
+    setIsLoading(true)
+
     try {
 
       const API_URL = import.meta.env.VITE_API_URL
@@ -35,12 +46,25 @@ const Login = () => {
       })
 
       const data = await res.json()
-
       console.log(data);
 
-    } catch (error) {
-      console.log(error.response.data.message || error.message);
+      if (!res.ok) {
+        toast.error(data.message)
+        return
+      }
+
+      toast.success(data.message)
+      getCurrentUser()
     }
+
+    catch (error) {
+      console.log(error.message);
+    }
+
+    finally {
+      setIsLoading(false)
+    }
+
   }
 
 
@@ -69,6 +93,7 @@ const Login = () => {
               name="email"
               value={formInputs.email}
               onChange={handleInputChange}
+              autoComplete="off"
             />
           </div>
 
@@ -85,13 +110,14 @@ const Login = () => {
               name="password"
               value={formInputs.password}
               onChange={handleInputChange}
+              autoComplete="off"
             />
           </div>
 
           {/* Forgot Password */}
           <div className="flex justify-end">
             <Link
-              to="/forgot-password"
+              to="/login"
               className="text-sm text-gray-200 hover:text-white"
             >
               Forgot Password?
@@ -102,8 +128,9 @@ const Login = () => {
           <button
             type="submit"
             className="w-full py-3 bg-white text-purple-700 font-semibold rounded-xl hover:scale-[1.02] transition-all duration-300"
+            disabled={isLoading}
           >
-            Login
+            {isLoading ? 'Logging in...' : 'Login'}
           </button>
 
           {/* Signup Link */}

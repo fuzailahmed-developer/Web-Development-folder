@@ -1,11 +1,17 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import toast from "react-hot-toast";
+import AuthContext from "../../context/auth/auth.context";
+import { useContext } from "react";
 
 const Signup = () => {
 
   const [profileImage, setProfileImage] = useState(null);
   const [isLoading, setIsLoading] = useState(false)
+
+  const navigate = useNavigate()
+
+  const { getCurrentUser } = useContext(AuthContext)
 
   const [formInputs, setFormInputs] = useState({
     firstName: '',
@@ -56,8 +62,6 @@ const Signup = () => {
         formData.append('profileImage', profileImage)
       }
 
-      console.log(formData);
-
       const res = await fetch(`
         ${API_URL}/api/signup
       `, {
@@ -76,8 +80,13 @@ const Signup = () => {
 
       toast.success(data.message)
       console.log(data);
+
       clearForm()
       setProfileImage(null)
+
+      getCurrentUser()
+
+      navigate('/login')
     }
 
     catch (error) {
@@ -92,7 +101,7 @@ const Signup = () => {
   }
 
   return (
-    <div className="w-full min-h-screen bg-linear-to-br from-indigo-600 via-purple-600 to-pink-500 flex justify-center items-center p-4">
+    <div className="w-full min-h-screen bg-linear-to-br from-indigo-600 via-purple-600 to-pink-500 flex justify-center items-center px-4">
       <div className="w-full max-w-lg bg-white/10 min-h-60 backdrop-blur-lg border border-white/20 shadow-2xl rounded-3xl p-8">
 
         <h1 className="text-2xl sm:text-4xl font-bold text-white text-center mb-2">

@@ -13,7 +13,6 @@ const uploadOnCloudinary = async (filePath) => {
     if (!filePath) return null
 
     let result = await cloudinary.uploader.upload(filePath)
-    console.log(result);
 
     return result.secure_url
 

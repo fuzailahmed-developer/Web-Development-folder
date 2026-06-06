@@ -103,7 +103,7 @@ export const logoutController = async (req, res) => {
   }
 }
 
-export const getUserData = async (req, res) => {
+export const getUserDataController = async (req, res) => {
   try {
 
     const userId = req.userId
