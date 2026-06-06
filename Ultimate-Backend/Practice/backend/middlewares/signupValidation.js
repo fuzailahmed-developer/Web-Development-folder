@@ -1,37 +1,40 @@
-import User from "../models/user.model.js";
+import Person from "../src/models/person.model.js"
 
-const signupValidation = async (req, res, next) => {
+export const signupValidation = async (req, res, next) => {
   try {
+
+    console.log('body',req.body);
 
     if (!req.body || Object.keys(req.body).length === 0) {
       return res.status(400).json({
-        message: 'Request body is required.',
+        success: false,
+        message: 'Request body is required.'
       })
     }
 
-    const { firstName, lastName, userName, email, password, profileImage } = req.body
+    const { firstName, lastName, userName, email, password, profileImage } = req?.body
 
-    const allowedFields = ['firstName', 'lastName', 'userName', 'email', 'password', 'profileImage']
+    const allowFields = ['firstName', 'lastName', 'userName', 'email', 'password', 'profileImage']
 
     const receivedFields = Object.keys(req.body)
 
     const hasExtraField = receivedFields.some(
-      (filed) => !allowedFields.includes(filed)
+      (field) => !allowFields.includes(field)
     )
 
     if (hasExtraField) {
       return res.status(400).json({
         success: false,
-        message: `Only ${allowedFields.join(' , ')} are allowed.`
+        message: `Only ${allowFields.join(' , ')} is Allowed`
       })
     }
 
     if (
-      !firstName.trim(),
-      !lastName.trim(),
-      !userName.trim(),
-      !email.trim(),
-      !password.trim()
+      !firstName?.trim(),
+      !lastName?.trim(),
+      !userName?.trim(),
+      !email?.trim(),
+      !password?.trim()
     ) {
       return res.status(400).json({
         success: false,
@@ -39,7 +42,7 @@ const signupValidation = async (req, res, next) => {
       })
     }
 
-    const isUserExist = await User.findOne({ $or: [{ userName }, { email }] })
+    const isUserExist = await Person.findOne({ $or: [{ email }, { userName }] })
 
     if (isUserExist) {
       return res.status(400).json({
@@ -66,5 +69,3 @@ const signupValidation = async (req, res, next) => {
     })
   }
 }
-
-export default signupValidation

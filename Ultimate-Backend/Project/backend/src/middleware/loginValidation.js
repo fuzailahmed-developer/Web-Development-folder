@@ -1,6 +1,7 @@
-import User from "../models/user.model.js";
+import bcrypt from "bcryptjs"
+import User from "../models/user.model.js"
 
-const signupValidation = async (req, res, next) => {
+export const loginValidation = async (req, res, next) => {
   try {
 
     if (!req.body || Object.keys(req.body).length === 0) {
@@ -9,9 +10,9 @@ const signupValidation = async (req, res, next) => {
       })
     }
 
-    const { firstName, lastName, userName, email, password, profileImage } = req.body
+    const { userName, email, password } = req.body
 
-    const allowedFields = ['firstName', 'lastName', 'userName', 'email', 'password', 'profileImage']
+    const allowedFields = ['userName', 'email', 'password']
 
     const receivedFields = Object.keys(req.body)
 
@@ -26,25 +27,18 @@ const signupValidation = async (req, res, next) => {
       })
     }
 
-    if (
-      !firstName.trim(),
-      !lastName.trim(),
-      !userName.trim(),
-      !email.trim(),
-      !password.trim()
-    ) {
+    if (!password?.trim() || (!userName?.trim() && !email?.trim())) {
       return res.status(400).json({
-        success: false,
-        message: 'All fields are required except profile image.'
-      })
+        message: "Password is required and either username or email must be provided."
+      });
     }
 
     const isUserExist = await User.findOne({ $or: [{ userName }, { email }] })
 
-    if (isUserExist) {
+    if (!isUserExist) {
       return res.status(400).json({
         success: false,
-        message: "Username or Email already exists"
+        message: "User does not exists."
       });
     }
 
@@ -53,6 +47,14 @@ const signupValidation = async (req, res, next) => {
         success: false,
         message: 'Password length must be greater then 8.'
       })
+    }
+
+    const isPasswordCorrect = await bcrypt.compare(password, isUserExist.password)
+
+    if (!isPasswordCorrect) {
+      return res.status(401).json({
+        message: "Invalid Password"
+      });
     }
 
     next()
@@ -66,5 +68,3 @@ const signupValidation = async (req, res, next) => {
     })
   }
 }
-
-export default signupValidation

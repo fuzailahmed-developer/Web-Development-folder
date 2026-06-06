@@ -27,6 +27,8 @@ const PersonSchema = new mongoose.Schema({
     type: String,
     required: false
   }
+}, {
+  timestamps: true
 })
 
 const Person = mongoose.model('Person', PersonSchema)
