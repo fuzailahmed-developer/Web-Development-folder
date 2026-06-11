@@ -1,4 +1,6 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
+import { Link, useNavigate } from "react-router"
 
 export default function Signup() {
   const [formData, setFormData] = useState({
@@ -11,6 +13,9 @@ export default function Signup() {
 
   const [profileImage, setProfileImage] = useState(null);
   const [preview, setPreview] = useState(null);
+  const [loading, setLoading] = useState(false)
+
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -25,24 +30,62 @@ export default function Signup() {
     }
   };
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const data = new FormData();
+    const userFormData = new FormData();
 
-    data.append("firstName", formData.firstName);
-    data.append("lastName", formData.lastName);
-    data.append("userName", formData.userName);
-    data.append("email", formData.email);
-    data.append("password", formData.password);
+    userFormData.append("firstName", formData.firstName);
+    userFormData.append("lastName", formData.lastName);
+    userFormData.append("userName", formData.userName);
+    userFormData.append("email", formData.email);
+    userFormData.append("password", formData.password);
 
     if (profileImage) {
-      data.append("profileImage", profileImage);
+      userFormData.append("profileImage", profileImage);
     }
 
-    console.log("Submitting...");
-    // axios.post("/api/auth/signup", data)
+    handleSignup(userFormData)
+
   };
+
+  const handleSignup = async (userFormData) => {
+    if (loading) return
+
+    setLoading(true)
+
+    try {
+      const API_URL = import.meta.env.VITE_API_URL
+
+      const res = await fetch(
+        `${API_URL}/api/signup`, {
+        method: "POST",
+        credentials: 'include',
+        body: userFormData
+      }
+      )
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        toast.error(data?.message)
+        return
+      }
+
+      toast.success(data?.message)
+      navigate('/login')
+    }
+
+    catch (error) {
+      console.log(error);
+      toast.error("Something went wrong");
+    }
+
+    finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
@@ -126,9 +169,19 @@ export default function Signup() {
             type="submit"
             className="w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800 transition"
           >
-            Sign Up
+            {
+              loading ? 'Sign up...' : 'Signup'
+            }
           </button>
         </form>
+        <p className="text-center text-sm text-gray-500 mt-5">
+          have an account?{" "}
+          <Link to={'/login'}>
+            <span className="font-medium text-black cursor-pointer hover:underline">
+              Login
+            </span>
+          </Link>
+        </p>
       </div>
     </div>
   );

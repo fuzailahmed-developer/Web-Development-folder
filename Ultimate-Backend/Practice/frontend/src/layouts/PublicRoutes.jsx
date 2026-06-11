@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Navigate, Outlet } from 'react-router'
+import AuthContext from '../context/AuthContext'
+import Loading from '../components/Loading'
 
 
 const PublicRoutes = () => {
 
-  const isAuthenticated = false
+  const { loading, isAuthenticated } = useContext(AuthContext)
 
-  return isAuthenticated ? <Navigate to={'/'}/> : <Outlet />
-   
+  if (loading) return <Loading />
+
+  return isAuthenticated ? <Navigate to={'/'} /> : <Outlet />
+
 }
 
 export default PublicRoutes
