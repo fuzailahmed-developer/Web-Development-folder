@@ -1,6 +1,8 @@
-import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+
+  await new Promise((res) => setTimeout(res,2000))
+
   return (
     <div>
       <h1>
