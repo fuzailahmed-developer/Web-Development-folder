@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "Ali Khan",
+    "username": "alikhan",
+    "email": "ali@example.com",
+    "age": 22,
+    "city": "Karachi"
+  },
+  {
+    "id": "2",
+    "name": "Ahmed Raza",
+    "username": "ahmedraza",
+    "email": "ahmed@example.com",
+    "age": 25,
+    "city": "Lahore"
+  },
+  {
+    "id": "3",
+    "name": "Fatima Noor",
+    "username": "fatimanoor",
+    "email": "fatima@example.com",
+    "age": 21,
+    "city": "Islamabad"
+  },
+  {
+    "id": "4",
+    "name": "Ayesha Siddiqui",
+    "username": "ayeshas",
+    "email": "ayesha@example.com",
+    "age": 24,
+    "city": "Peshawar"
+  },
+  {
+    "id": "5",
+    "name": "Usman Malik",
+    "username": "usmanmalik",
+    "email": "usman@example.com",
+    "age": 28,
+    "city": "Faisalabad"
+  },
+  {
+    "id": "6",
+    "name": "Zain Ahmed",
+    "username": "zainahmed",
+    "email": "zain@example.com",
+    "age": 23,
+    "city": "Multan"
+  },
+  {
+    "id": "7",
+    "name": "Hina Iqbal",
+    "username": "hinaiqbal",
+    "email": "hina@example.com",
+    "age": 26,
+    "city": "Rawalpindi"
+  },
+  {
+    "id": "8",
+    "name": "Bilal Sheikh",
+    "username": "bilalsheikh",
+    "email": "bilal@example.com",
+    "age": 27,
+    "city": "Hyderabad"
+  },
+  {
+    "id": "9",
+    "name": "Sara Javed",
+    "username": "sarajaved",
+    "email": "sara@example.com",
+    "age": 20,
+    "city": "Quetta"
+  },
+  {
+    "id": "10",
+    "name": "Hamza Farooq",
+    "username": "hamzafarooq",
+    "email": "hamza@example.com",
+    "age": 29,
+    "city": "Sialkot"
+  }
+]
