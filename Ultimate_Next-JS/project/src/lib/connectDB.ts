@@ -30,7 +30,7 @@ const connectDB = async () => {
   }
   catch (error) {
     cached.promise = null
-    throw new Error('Database Connection ERR...!')
+    throw new Error('Database connection err...!')
   }
 
   return cached.conn

@@ -11,8 +11,9 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           message: 'All fields are required',
-          status: 400
-        }
+          success: false
+        },
+        { status: 400 }
       )
     }
 
@@ -70,7 +71,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export async function GET(){
+export async function GET() {
   return NextResponse.json({
     message: 'hello world'
   })

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AuthProvider from "@/components/providers/SessionProvider";
+import { UserContextProvider } from "@/context/user.context";
 
 export const metadata: Metadata = {
   title: "Full Stack Project",
@@ -17,7 +19,11 @@ export default function RootLayout({
       className={`h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {children}
+        <AuthProvider>
+          <UserContextProvider>
+            {children}
+          </UserContextProvider>
+        </AuthProvider>
       </body>
     </html>
   );

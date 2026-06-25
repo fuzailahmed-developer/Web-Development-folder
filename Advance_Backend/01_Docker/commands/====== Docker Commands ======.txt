@@ -1,0 +1,13 @@
+<====== Docker Commands ======>
+
+1. docker run -it ubuntu ==> ubuntu image sa aik naya container banao
+2. docker ps ==> for check running containers
+3. docker ps -a ==> for check all containers running or not
+4. docker images 
+5. docker stop container id or name ==> for stop running container
+6. docker start id or name ==> start container
+7. docker exec -it name or id bash => access running container
+8. exit ==> back to terminal
+9. docker rm id or name ==> remove stopped container
+10. docker build -t image-name (path .) => create docker file to image then run container
+11. cat server.js ==> inside container terminal
