@@ -1,0 +1,97 @@
+.navbar {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  color: #2563eb;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #2563eb;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.loginBtn,
+.signupBtn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.loginBtn {
+  background: transparent;
+  border: 2px solid #2563eb;
+  color: #2563eb;
+}
+
+.loginBtn:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.signupBtn {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+.signupBtn:hover {
+  background: #1d4ed8;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: center;
+  }
+}
